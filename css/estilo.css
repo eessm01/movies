@@ -25,10 +25,10 @@ body {
 }
 .logo h1 {
   font-family: 'Dokdo', cursive;
-  font-size: 3em;
+  font-size: 2.5em;
   color: white;
   margin: 0;
-  margin-left: 7px;
+  margin-left: .1em;
   text-shadow: -1px 0 red, 0 2px red, 2px 0 red, 0 -1px red;
 }
 .logo img {
@@ -42,12 +42,15 @@ body {
   align-items: center;
 }
 .seeker input {
-  color: #ccc;
   width: 100%;
   padding: 7px;
-  border-radius: 5px;
-  border: 2px solid #ccc;
+  border-radius: 15px;
+  border: 2px solid rgb(253, 95, 97);
   font-size: 14px;
+  /* background-color:rgba(253, 95, 97,.05); */
+}
+.seeker input:focus{
+  outline:0px;
 }
 .user {
   display: flex;
@@ -60,16 +63,19 @@ body {
   font-weight: 600;
 }
 .avatar img {
-  /* width: 50px; */
-  /* height:0px; */
-  border: 1px solid gray;
+  border: 1px solid rgb(253, 95, 97);
   border-radius: 50%;
   padding: 3px;
 }
-.arrow img {
+.arrow {
   width: 10px;
   height: 10px;
-  padding: 3px;
+  padding: 5px;
+  color: rgb(253, 95, 97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .sidebar {
   grid-area: sidebar;
@@ -88,6 +94,7 @@ body {
 }
 .sidebar .nav i{
   font-size: 2em;
+  transition-duration: .5s;
 }
 .sidebar .nav:last-child {
   margin-top: auto;
@@ -96,21 +103,50 @@ body {
   color:  rgb(253, 95, 97);
   cursor: pointer;
 } 
-.nav i:hover {
+.nav:hover i{
   font-size: 3em;
 } 
-/*
-.sidebar-option i, .ajustes i {
-  
-  padding: 15px;
-}
-.sidebar-option p, .ajustes p{
-  margin: 0 ; 
-}*/
 
 .content {
+  margin: 15px;
+  margin-top: 15px;
   grid-area: content;
-  /* border: 1px solid pink; */
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(3,.4fr);
+  grid-auto-rows: 30px 250px 30px 250px 30px 250px; 
+}
+.item {
+  border: 1px solid red;
+  position: relative;
+}
+.movie .text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  width: 100%;
+  height: 30%;
+  background-color: rgba(253, 95, 97, .7);
+  transition-duration: 1s;
+}
+.movie:hover .text{
+  height: 100%;
+  background-color: rgba(253, 95, 97, .9);
+}
+.movie .text .title {
+  width: 100%;
+  display: inline-block; /*se extiende por todo el width*/
+  font-size: 1.3em;
+  padding: 5px;
+  font-weight: 600;
+}
+.classification {
+  grid-column-end: span 3;
+}
+.movie img{
+  width: 100%;
+  height: 100%;
 }
 .footer {
   grid-area: footer;
