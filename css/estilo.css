@@ -182,11 +182,26 @@ body {
 
 @media screen and (max-width: 767px) {
   body {
-    font-size: 12px;
+    font-size: 11px;
+  }
+  .wrapper {
+    grid-template-columns: minmax(50px,70px) 1fr;
   }
   .content {
     grid-template-columns: repeat(3,.4fr);
     grid-auto-rows: 3% 15% 3% 15% 3% 15%; 
     grid-gap: .5em;
+  }
+  .classification {
+    font-size: 1.5em;
+  }
+  .movie .text .title {
+    font-size: 1em;
+  }
+  .sidebar .nav a{
+    font-size: .9em;
+  }
+  .social-networks{
+    font-size: 2em;
   }
 }
