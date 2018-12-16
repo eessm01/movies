@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <i class="fas fa-bars burger-button"></i>
+  <i class="fas fa-bars burger-button" id="burger-menu"></i>
   <div class="wrapper">
     <div class="header">
       <span class="logo">
@@ -152,52 +152,38 @@
       </div>
     </div>
   </div>
-  <!--script>
-      // console.log('hola mundo');
-      // console.log(document.querySelector('.menu'));
-      // console.log(window.matchMedia('screen and (max-width: 767px)'));
+  <script>
   
-      const ipad = window.matchMedia('screen and (max-width: 480px)')
-      const menu = document.querySelector('.')
+      const cel = window.matchMedia('screen and (max-width: 480px)')
+      const menu = document.querySelector('.sidebar')
       const burgerButton = document.querySelector('#burger-menu')
-      const links = document.querySelectorAll('.link')
-  
-      ipad.addListener(validation) //para que se ejecute requiere un cambio en la pantalla
+      const navs = document.querySelectorAll('.nav')  
       
-      
+      validation(cel);
   
       // valida que el media query sea el correcto para prender o no el listener
       function validation(event) {
-        // console.log(event.matches)
         if (event.matches) {   
           burgerButton.addEventListener('click',hideShow)
-          // link.addEventListener('click',hideShow)
-          Array.from(links).forEach( link=> { 
-            link.addEventListener('click',hideShow)
+          Array.from(navs).forEach( nav=> { 
+            nav.addEventListener('click',hideShow)
           })
         }
         else {
           burgerButton.removeEventListener('click',hideShow)
         }
       }
-      
-      // para que funcione el menú de hamburguesa en la recarga
-      validation(ipad) //ipad regresa un true o false si se entra o no al media query
-      //para que escuche desde la recarga
-      // if (ipad.matches) {
-      //   burgerButton.addEventListener('click',hideShow)
-      // }
   
-      //agrega o quita la clase para mostrar u ocultar el menu
+       //agrega o quita la clase para mostrar u ocultar el menu
       function hideShow() {
-        if (menu.classList.contains('is-active')) {
+      if (menu.classList.contains('is-active')) {
           menu.classList.remove('is-active')
         }
         else {
           menu.classList.add('is-active')
         }
       }
-    </script-->
+    </script>
 </body>
 
 </html>

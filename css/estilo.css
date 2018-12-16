@@ -200,6 +200,7 @@ body {
   }
   .wrapper {
     grid-template-columns: minmax(50px,70px) 1fr;
+    min-width: 350px;
   }
   .content {
     grid-template-columns: repeat(3,.4fr);
@@ -228,7 +229,7 @@ body {
                          "content"
                          "footer";
     max-width: 480px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     justify-items: center;
   } 
   .logo h1 {
@@ -259,14 +260,5 @@ body {
   }
   .is-active {
     visibility: visible;
-  }
-  .header {
-    /* border: 1px solid green; */
-  }
-  .content {
-    /* border: 1px solid pink; */
-  }
-  .footer {
-    /* border: 1px solid blue; */
   }
 }
