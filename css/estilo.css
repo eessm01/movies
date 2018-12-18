@@ -34,10 +34,10 @@ body {
   color: white;
   margin: 0;
   margin-left: .1em;
-  text-shadow: -1px 0 red, 0 2px red, 2px 0 red, 0 -1px red;
+  text-shadow: -1px 0 blue, 0 2px blue, 2px 0 blue, 0 -1px blue;
 }
 .logo img {
-  width: 2.5em;
+  width: 3.5em;
   height: 2.5em;
 }
 .seeker {
@@ -50,7 +50,7 @@ body {
   width: 100%;
   padding: 7px;
   border-radius: 15px;
-  border: 2px solid rgb(253, 95, 97);
+  border: 2px solid rgb(95, 158, 253);
   font-size: .8em;
   /* background-color:rgba(253, 95, 97,.05); */
 }
@@ -68,7 +68,7 @@ body {
   font-weight: 600;
 }
 .avatar img {
-  border: 1px solid rgb(253, 95, 97);
+  border: 1px solid rgb(95, 158, 253);
   border-radius: 50%;
   padding: 3px;
 }
@@ -76,7 +76,7 @@ body {
   width: 10px;
   height: 10px;
   padding: 5px;
-  color: rgb(253, 95, 97);
+  color: rgb(95, 158, 253);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,8 +84,8 @@ body {
 }
 .sidebar {
   grid-area: sidebar;
-  background: rgb(253, 95, 97);
-  background-image: linear-gradient(to bottom right, rgb(253, 95, 97), rgb(250, 250, 250));
+  background:rgb(95, 158, 253);
+  background-image: linear-gradient(to bottom right, rgb(95, 158, 253), rgb(250, 250, 250));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,7 +105,7 @@ body {
   margin-top: auto;
 }
 .nav:hover {
-  color:  rgb(253, 95, 97);
+  color:  rgb(95, 158, 253);
   cursor: pointer;
 } 
 .nav:hover i{
@@ -137,12 +137,12 @@ body {
   color: white;
   width: 100%;
   height: 30%;
-  background-color: rgba(253, 95, 97, .5);
+  background-color: rgba(95, 158, 253,.5);
   transition-duration: 1s;
 }
 .movie:hover .text {
   height: 100%;
-  background-color: rgba(253, 95, 97, .7);
+  background-color: rgba(95, 158, 253.7);
   /* display: inline; */
 }
 .movie .text .title {
@@ -171,7 +171,7 @@ body {
   /* border: 1px solid blue; */
 }
 .social-networks{
-  color: rgba(253, 95, 97, 1);
+  color: rgba(95, 158, 253,1);
   font-size: 3em;
   text-align: center;
 } 
@@ -183,7 +183,7 @@ body {
 .burger-button {
   width: 40px;
   height: 40px;
-  background-color: rgba(253, 95, 97, .9);
+  background-color: rgba(95, 158, 253.9);
   border-radius: 50%;
   color: white;
   position: fixed;
